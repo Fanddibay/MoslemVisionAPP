@@ -25,6 +25,11 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="/src/libaries/xzoom/xzoom.css" />
   </head>
   <body class="">
     <!-- dekstop -->
@@ -103,15 +108,16 @@
             Explore the <br />
             Moslem Cloth
           </h2>
-          <div class="row">
-            <div class="col">
+          <div class="row gallery">
+            <div class="col xzoom-container">
               <img
                 src="/src/assets/shop-1.png"
-                class="img-fluid"
+                class="img-fluid xzoom"
+                id="xzoom-default"
                 style="height: 234px; width: 200px"
                 alt=""
               />
-              <h5 class="fw-bold">Kurta Yaman</h5>
+              <h5 class="fw-bold mt-2">Kurta Yaman</h5>
               <p class="fw-light">Rp. 130.000</p>
             </div>
             <div class="col">
@@ -121,7 +127,7 @@
                 style="height: 234px; width: 200px"
                 alt=""
               />
-              <h5 class="fw-bold">Kurta Arab</h5>
+              <h5 class="fw-bold mt-2">Kurta Arab</h5>
               <p class="fw-light">Rp. 150.000</p>
             </div>
           </div>
@@ -133,27 +139,54 @@
                 style="height: 234px; width: 200px"
                 alt=""
               />
-              <h5 class="fw-bold">Kurta Yaman</h5>
+              <h5 class="fw-bold mt-2">Kurta Yaman</h5>
               <p class="fw-light">Rp. 130.000</p>
             </div>
-            <div class="col">
+            <div class="col animate__animated animate__bounce">
               <img
                 src="/src/assets/shop-4.jpg"
                 class="img-fluid"
                 style="height: 234px; width: 200px"
                 alt=""
               />
-              <h5 class="fw-bold">Kurta Arab</h5>
+              <h5 class="fw-bold mt-2">Kurta Arab</h5>
               <p class="fw-light">Rp. 150.000</p>
             </div>
           </div>
+          <div id="moreProduct">
+            <div class="row animate__animated animate__backInUp">
+              <div class="col">
+                <img
+                  src="/src/assets/shop-3.png"
+                  class="img-fluid"
+                  style="height: 234px; width: 200px"
+                  alt=""
+                />
+                <h5 class="fw-bold mt-2">Kurta Yaman</h5>
+                <p class="fw-light">Rp. 130.000</p>
+              </div>
+              <div class="col">
+                <img
+                  src="/src/assets/shop-4.jpg"
+                  class="img-fluid"
+                  style="height: 234px; width: 200px"
+                  alt=""
+                />
+                <h5 class="fw-bold mt-2">Kurta Arab</h5>
+                <p class="fw-light">Rp. 150.000</p>
+              </div>
+            </div>
+          </div>
           <div class="justify-content-center my-5 text-center">
-            <a href="#" class="btnCustom">Show More</a>
+            <button id="moreBtnImg" onclick="toggleBtnImg()" class="btnCustom">
+              Show More
+            </button>
           </div>
         </div>
       </section>
       <!-- end product -->
       <hr />
+      <!-- reviews -->
       <section id="reviews">
         <!-- reviews -->
         <div class="container my-3">
@@ -211,6 +244,8 @@
         <hr class="my-4" />
         <!-- end reviews -->
       </section>
+      <!-- end reviews -->
+
       <!-- about us -->
       <section id="aboutUs">
         <div class="my-5 container">
@@ -236,7 +271,7 @@
               mt-5
             "
           >
-            <a href="#" class="btn btn-danger">Order Langsung</a>
+            <a href="product-1.html" class="btn btn-danger">Order Langsung</a>
             <a href="#" class="btn btn-primary">Tanya Tanya</a>
           </div>
         </div>
@@ -415,5 +450,16 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <script src="/src/libaries/xzoom/xzoom.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".xzoom, .xzoom-gallery").xzoom({
+          zoomWidht: 500,
+          title: false,
+          tint: "#333",
+          Xoffset: 15,
+        });
+      });
+    </script>
   </body>
 </html>

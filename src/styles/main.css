@@ -41,3 +41,12 @@ body {
   color: rgb(0, 0, 0);
   font-weight: bold;
 }
+
+/* utilities javascript */
+#moreTextShow {
+  display: none;
+}
+
+#moreProduct {
+  display: none;
+}
